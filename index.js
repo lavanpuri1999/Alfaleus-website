@@ -65,11 +65,11 @@ if(elementScrolled('.feature-box')){
  }
 
 
-    /*if(elementScrolled('.intro_text2')){
-        $('.intro_text1').addClass('fadeIn');
+    if(elementScrolled('.intro-container-new')){
+      
         $('.globe_img').addClass('fadeIn');
-        $('.intro_text2').addClass('fadeIn');
-    }*/
+      
+    }
     
     if(elementScrolled('.vrbox_img')){
         $('.vrbox_img').addClass('fadeIn');
