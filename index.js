@@ -16,23 +16,25 @@ $('.hidden-hamburger').click(function(){
     }
 });
 
+
+
 $('.siema').slick({
     centerMode: true,
     centerPadding: '60px',
-    slidesToShow: 3,
+    slidesToShow: 2,
     autoplay : true,
     responsive: [
       {
-        breakpoint: 1000,
+        breakpoint: 1100,
         settings: {
           arrows: false,
           centerMode: true,
           centerPadding: '40px',
-          slidesToShow: 3
+          slidesToShow: 1
         }
       },
       {
-        breakpoint: 768,
+        breakpoint: 900,
         settings: {
           arrows: false,
           centerMode: true,
@@ -56,6 +58,7 @@ function elementScrolled(elem)
     return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
 }
 
+
 if(elementScrolled('.feature-box')){
 
     $('.fb1').addClass('fadeIn');
@@ -66,9 +69,9 @@ if(elementScrolled('.feature-box')){
 
 
     if(elementScrolled('.intro-container-new')){
-      
+        $('.intro_text').removeClass('text-anim');
+        $('.intro_text').addClass('fadeandslideIn');
         $('.globe_img').addClass('fadeIn');
-      
     }
     
     if(elementScrolled('.vrbox_img')){
