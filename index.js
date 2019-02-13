@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+    $window = $(window);
+    $animation_elements = $('.intro_text');
+
 $('.nav-menu').css('height',$(window).height());
 
 $(window).on('scroll',check_if_in_view);
@@ -16,6 +19,9 @@ $('.hidden-hamburger').click(function(){
     }
 });
 
+$('.nav-list').children().hover(function(){
+    $(this).find("div").toggleClass('width-toggle');
+});
 
 
 $('.siema').slick({
@@ -23,6 +29,8 @@ $('.siema').slick({
     centerPadding: '60px',
     slidesToShow: 2,
     autoplay : true,
+    prevArrow : $('.prev-img'),
+    nextArrow : $('.next-img'),
     responsive: [
       {
         breakpoint: 1100,
@@ -44,11 +52,12 @@ $('.siema').slick({
       }
     ]
   });
-          
+
 
 function check_if_in_view()
 {
 
+    
     
 function elementScrolled(elem)
 {
@@ -57,6 +66,9 @@ function elementScrolled(elem)
     var elemTop = $(elem).offset().top;
     return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
 }
+
+
+
 
 
 if(elementScrolled('.feature-box')){
@@ -72,11 +84,15 @@ if(elementScrolled('.feature-box')){
         $('.intro_text').removeClass('text-anim');
         $('.intro_text').addClass('fadeandslideIn');
         $('.globe_img').addClass('fadeIn');
+
     }
     
     if(elementScrolled('.vrbox_img')){
         $('.vrbox_img').addClass('fadeIn');
     }
+
+
+
     
 
     var scroll = $(window).scrollTop();
@@ -90,8 +106,8 @@ if(elementScrolled('.feature-box')){
     if(scroll<50)
     {
         $('nav').removeClass('nav_onmove');
-        $('.nav-header').css('color','#0E74B0');
-        $('a').css('color','#0E74B0');
+        $('.nav-header').css('color','white');
+        $('a').css('color','white');
     }
 }
 
