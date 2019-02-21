@@ -15,18 +15,18 @@
                 <h3 class="nav-header">Alfaleus Technology</h3>
             </div>
             <ul class="nav-list">
-                <li><a href="index.html">Home</a><div class="hover-line"></div></li>
-                <li><a href="team.html">Team</a><div class="hover-line"></div></li>
-                <li><a href="./index.html#Contact">Contact</a><div class="hover-line"></div></li>
+                <li><a href="index.php">Home</a><div class="hover-line"></div></li>
+                <li><a href="team.php">Team</a><div class="hover-line"></div></li>
+                <li><a href="./index.php#Contact">Contact</a><div class="hover-line"></div></li>
             </ul>
             <img src="./public/menu.svg" class="hidden-hamburger temp-img-1"/>
             <img src="./public/menu (1).svg" class="hidden-hamburger temp-img-2"/>
         </nav>
         <div class="nav-menu">
             <ul class="list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="team.html">Team</a></li>
-                    <li><a href="./index.html#Contact">Contact</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="team.php">Team</a></li>
+                    <li><a href="./index.php#Contact">Contact</a></li>
             </ul>
         </div>
         <div class="team-description">

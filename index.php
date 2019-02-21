@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="./slick-theme.css"/>
     <title>Alfaleus</title>
 </head>
+<?php include 'db_connect.php'; ?>
 <body>
     <nav>
         <div class="header-title">
@@ -16,16 +17,16 @@
             <h3 class="nav-header">Alfaleus Technology</h3>
         </div>
         <ul class="nav-list">
-            <li><a href="index.html">Home</a><div class="hover-line"></div></li>
-            <li><a href="team.html">Team</a><div class="hover-line"></div></li>
+            <li><a href="index.php">Home</a><div class="hover-line"></div></li>
+            <li><a href="team.php">Team</a><div class="hover-line"></div></li>
             <li><a href="#Contact">Contact</a><div class="hover-line"></div></li>
         </ul>
         <img src="./public/menu (1).svg" class="hidden-hamburger"/>
     </nav>
     <div class="nav-menu">
             <ul class="list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="team.html">Team</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="team.php">Team</a></li>
                     <li><a href="#Contact">Contact</a></li>
         </ul>
     </div>
@@ -162,19 +163,18 @@
     </div>
     </div>
     <div class="contact-form" id="Contact">
-        <form>
+        <form class="form-area">
             <h1>Contact Us</h1>
             <div class="name-initials">
-                <input placeholder="First Name"/>
-                <input placeholder="Second Name"/>
+                <input placeholder="First Name" name="first_name" id="first_name"/>
+                <input placeholder="Second Name" name="last_name" id="last_name"/>
             </div>
             <div class="name-initials">
-                <input placeholder="Email"/>
-                <input placeholder="Phone"/>
+                <input placeholder="Email" name="e-mail" id="e-mail"/>
+                <input placeholder="Phone" name="phone" id="phone"/>
             </div>
             <textarea class="msg-pane" placeholder="Type your message here"></textarea>
-        
-            <button>Submit</button>
+            <button class="contact-submit">Submit</button>
         </form>
         <div class="contact-details">
             <ul class="number-container">

@@ -19,6 +19,24 @@ $('.hidden-hamburger').click(function(){
     }
 });
 
+$('.contact-submit').click(function(e){
+    e.preventDefault();
+    var first_name = $('#first_name').val();
+    var last_name = $('#last_name').val();
+    var email = $('#e-mail').val();
+    var phone = $('#phone').val();
+    var msg = $('.msg-pane').val();
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'datastore.php', true);
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    xhr.onload = function () {
+        // do something to response
+    console.log(this.responseText);
+};
+    xhr.send('first_name='+first_name + '&last_name='+last_name + '&email='+email + '&phone='+phone +'&message='+msg);
+   
+});
+
 $('.nav-list').children().hover(function(){
     $(this).find("div").toggleClass('width-toggle');
 });
