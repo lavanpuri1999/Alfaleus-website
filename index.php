@@ -32,9 +32,9 @@
     </div>
     <div class="intro-container-new">
         <div class="intro_text text-anim">
-            <h2>In 2013, 64.3 million people affected by glaucoma, increasing to 80 million in 2020 and 111.8 million in 2040. </h2>
-            <h2>55% of women will contribute to it. 90% of the cases go undetected.</h2>
-            <h2>We provide a portable, efficient and convenient Visual Field Testing.</h2>
+            <h2>285 million people worldwide have visual impairment  </h2>
+            <h2>64 million affect from Glaucoma </h2>
+            <h2>Upto 90% goes undiagnosed till advance stages</h2>
         </div>
         <img src="./public/half-face-min.png" class="globe_img" />
     </div>
@@ -81,8 +81,8 @@
     <div class="parallaxtrial">
         <h2>Want to know more about CFA?<br>Request a demo now</h2>
         <form>
-        <input placeholder="Email Address"/>
-        <button>Subscribe Now</button>
+        <input placeholder="Email Address" id="subscriber"/>
+        <button class="subscribe">Subscribe Now</button>
         </form>
     </div>
     <div class="testimonials">
@@ -165,6 +165,8 @@
     <div class="contact-form" id="Contact">
         <form class="form-area">
             <h1>Contact Us</h1>
+            <h3 class="warning">Please fill in the required fields</h3>
+            <h3 class="success">Thank You. We will reach back to you soon!</h3>
             <div class="name-initials">
                 <input placeholder="First Name" name="first_name" id="first_name"/>
                 <input placeholder="Second Name" name="last_name" id="last_name"/>

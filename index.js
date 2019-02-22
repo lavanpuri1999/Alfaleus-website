@@ -2,8 +2,8 @@ $(document).ready(function(){
 
     $window = $(window);
     $animation_elements = $('.intro_text');
-
-$('.nav-menu').css('height',$(window).height());
+$('.nav-menu').css('top',$('nav').height());
+$('.nav-menu').css('height',$(window).height()-$('nav').height());
 
 $(window).on('scroll',check_if_in_view);
 
@@ -26,16 +26,39 @@ $('.contact-submit').click(function(e){
     var email = $('#e-mail').val();
     var phone = $('#phone').val();
     var msg = $('.msg-pane').val();
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'datastore.php', true);
-    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    xhr.onload = function () {
-        // do something to response
-    console.log(this.responseText);
-};
-    xhr.send('first_name='+first_name + '&last_name='+last_name + '&email='+email + '&phone='+phone +'&message='+msg);
-   
+    console.log(first_name,last_name,email,phone);
+    if(first_name!=="" && last_name!=="" && email!=="" && phone!==""){
+        $('.warning').fadeOut(400);
+        $('.success').fadeIn(400);
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'datastore.php', true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhr.onload = function () {
+            // do something to response
+        console.log(this.responseText);
+    };
+        xhr.send('first_name='+first_name + '&last_name='+last_name + '&email='+email + '&phone='+phone +'&message='+msg);
+    }
+    else{
+        $('#first_name')
+        $('.success').fadeOut(400);
+        $('.warning').fadeIn(400);
+    }
 });
+
+$('.subscribe').click(function(e){
+    e.preventDefault();
+    var subscriber = $('#subscriber').val();
+    if(subscriber !==""){
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST','subscriber.php',true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhr.onload = function(){
+            console.log(this.responseText);
+        };
+        xhr.send('subscriber='+subscriber);
+    }
+})
 
 $('.nav-list').children().hover(function(){
     $(this).find("div").toggleClass('width-toggle');

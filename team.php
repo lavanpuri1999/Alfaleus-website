@@ -119,7 +119,7 @@
                         <h4>Glaucoma expert, Little flower, angamaly, Kerala</h4>
                         </div>
                         <div class="img-cont">
-                        <img src="./public/ezgif.com-webp-to-jpg (16).jpg" />
+                        <img src="./public/ezgif.com-webp-to-jpg (16).jpg" class="img-small" />
                         <h3>Dr. Priya S</h3>
                         <h4>Head of Neuro Ophthalmology, Aravind Eye Hospital, Pondicherry</h4>
                         </div>
