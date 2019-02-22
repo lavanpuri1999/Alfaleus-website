@@ -84,6 +84,9 @@
         <input placeholder="Email Address" id="subscriber"/>
         <button class="subscribe">Subscribe Now</button>
         </form>
+        <div class="thank-you">
+            <h2>Thank You for subscribing!</h2>
+        </div>
     </div>
     <div class="testimonials">
         <h1>Testimonials</h1>

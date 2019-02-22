@@ -119,11 +119,12 @@ nav>img{
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    height: 70%;
+    height: 50%;
     position: absolute;
     width: 50%;
     z-index: 2;
-    left: 40px;
+    top: 28%;
+    left: 80px;
     transition: all 1s 0.3s;
 }
 
@@ -154,7 +155,11 @@ nav>img{
         opacity: 0;
         font-size: 1.2em;
     }  
-    
+    .intro_text{
+        color: white;
+        width: 70%;
+        font-size: 1.2em;
+    }
     
     nav>img{
         display: block;
@@ -409,6 +414,7 @@ nav>img{
     text-align: center;
 }
 .parallaxtrial>form{
+    display: none !important;
     width: 500px;
     display: flex;
     height: 40px;
@@ -438,6 +444,19 @@ nav>img{
 .parallaxtrial>form>button:focus{
     outline: none;
 }
+.thank-you{
+    color: white;
+    background-color: #0E74B0;
+    width: 450px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.thank-you>h2{
+    margin: 10px;
+}
+
 .slideshow{
     display: flex;
     width: 100%;
